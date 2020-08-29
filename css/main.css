@@ -1,0 +1,721 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+* {
+  -ms-overflow-style: none;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  /* font-family: "Lato"; */
+  font-family: "Raleway";
+}
+
+#toppanel {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  /* styling */
+  /* background-image: url(../media/darkdesk.jpg); */
+  background-image: url(../media/darkdeskmob.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* @media only screen and (max-width: 900px)
+{
+  #toppanel
+  {
+    background-image: url(../media/darkdeskmob.jpg);
+
+  }
+
+} */
+
+#bottompanel {
+  position: absolute;
+  z-index: 2;
+  margin-top: 100vh;
+  width: 100%;
+  height: 133vh;
+
+  /* styling */
+  backdrop-filter: blur(10px);
+}
+
+.topgrid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25vh 25vh 25vh 25vh;
+}
+@keyframes fadeupc
+{
+  0%{margin-top: 1em;}
+}
+#curr {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+  /* background-color: red; */
+  font-size: 5em;
+  /* line-height: 4.7em; */
+  animation: fadeupc 0.3s 1.2s backwards 1;
+  line-height: 3em;
+  font-family: "Lato";
+  padding-left: 0.75em;
+  color: white;
+  text-shadow: rgba(0,0,0,0.6) 0.5px 0.5px 2px 2px, rgba(0,0,0,1) -0.5px -0.5px 2px;
+  text-shadow: rgba(0,0,0,0.35) 0.5px 0.5px 5px, rgba(0,0,0,0.35) -0.5px -0.5px 5px;
+
+}
+@keyframes fadeup
+{
+  0%{opacity: 0; margin-top: 1em;}
+  100%{opacity: 1; margin-top: 0em;}
+}
+#info
+{
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
+  color: white;
+  font-size: 1.15em;
+  padding: 1em;
+  margin-top: 0em;
+  /* font-weight: ; */
+  animation: fadeup 0.3s 1.5s backwards 1;
+  /* background-color: rgba(0,0,0,0.7); */
+  padding-left: 3em;
+  /* text-shadow: rgba(0,0,0,0.6) 0.5px 0.5px 1px, rgba(0,0,0,0.6) -0.5px -0.5px 1px; */
+}
+#web {
+  /* background-color: rgb(0, 21, 255); */
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.7em;
+}
+
+.contbutton {
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 2;
+  /* background-color: aquamarine; */
+}
+
+.contbutton .continue {
+  margin-top: 15%;
+  position: relative;
+  height: 35%;
+  width: 40%;
+  /* text-align: center; */
+  line-height: 2.1em;
+  font-size: 1.75em;
+  background-color: white;
+  color: black;
+  border: solid 2px rgb(194, 194, 194);
+  border-radius: 10px;
+  margin-left: 50%;
+}
+
+.addbtn {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 2;
+  /* background-color: aqua; */
+}
+.ody {
+  color: rgb(112, 62, 248);
+}
+.btnhover {
+  transition: all 0.3s;
+}
+.btnhover:hover {
+  filter: brightness(0.7);
+}
+.ptr
+{
+  cursor: pointer;
+}
+ #success
+{
+  background-color: rgb(24, 206, 93);
+  font-size: 1.25em;
+  color: white;
+  padding: 0.75em;
+  margin: 5%;
+  transition: all 0.5s;
+  display: block;
+  opacity: 0;
+  margin-top: 10%;
+  
+}
+@media only screen and (max-width: 1200px)
+{
+  .topgrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 8vh 20vh 30vh 15vh 15vh 12vh;
+  }
+
+
+
+  #curr {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    /* background-color: red; */
+    font-size: 3.25em;
+    line-height: 2.5em;
+    font-family: "Lato";
+    padding-left: 0em;
+    text-align: center;
+    color: white;
+  }
+
+  .contbutton {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+    /* text-align: center; */
+    /* background-color: aquamarine; */
+    
+  }
+
+  .addbtn {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 1;
+    /* background-color: aqua; */
+  }
+  .contbutton .continue
+  {
+    width: 90%;
+    /* margin-left: 100%; */
+    margin: 5%;
+    margin-top: 14%;
+    font-size: 1.5em;
+    height: max-content;
+  }
+
+  #info
+  {
+    font-size: 1em;
+    padding-left: 2em;
+  }
+  
+}
+
+/* for mobile devices END */
+
+.addvideo {
+  margin-top: 1%;
+  position: relative;
+  height: 35%;
+  width: 40%;
+  /* text-align: center; */
+  line-height: 2.1em;
+  /* background-color: rgb(0, 21, 255); */
+  font-size: 1.75em;
+  color: white;
+  /* color: black; */
+  border: solid 2px rgba(194, 194, 194, 0.1);
+  border-radius: 10px;
+  margin-left: 50%;
+}
+
+@media only screen and (max-width: 1200px)
+{
+  .addvideo
+  {
+    font-size: 1.5em;
+  }
+}
+
+
+.form
+{
+  position: absolute;
+  margin-left: 100vw;
+  z-index: 3;
+  height: 100vh;
+  transition: margin 0.5s;
+  width: 30vw;
+  background-color:white;
+  box-shadow: 0px 0px black,2px 2px 100px 10px rgba(0,0,0,0.7);
+  border-radius: 10px;
+}
+
+.formheader
+{
+  font-size: 3em;
+  padding: 0.75em;
+}
+@media only screen and (max-width: 1200px)
+{
+  .formheader
+  {
+    font-size: 2em;
+  }
+  
+}
+.padicon
+{
+  transform: scale(0.7);
+  float: right;
+  padding-top: 0.125em;
+  vertical-align: middle;
+  transition: opacity 0.3s;
+}
+.padicon:hover
+{
+  opacity: 0.5;
+}
+
+input{
+  padding: 0.5em;
+  padding-top: 0.75em;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  padding-bottom: 0.75em;
+  border-radius: 5px;
+  color: rgb(126, 126, 126);
+  border: solid 1px rgb(71, 71, 71);
+  font-size: 1.25em;
+  width: 90%;
+  /* margin-bottom: 5px; */
+}
+
+.formsubmit
+{
+  font-size: 1.25em;
+  width: 90%;
+  padding: 0.5em;
+  padding-top: 0.75em;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  padding-bottom: 0.75em;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  /* font-family: 'Roboto'; */
+  /* background-color: rgb(72, 83, 201); */
+}
+
+
+@media only screen and (max-width: 800px)
+{
+  input
+  {
+    font-size: 1em;
+  }
+  .formsubmit
+  {
+    font-size: 1em;
+  }
+  .addvideo
+  {
+    /* margin-left: 0%; */
+    margin: 5%;
+    width: 90%;
+    height: max-content;
+  }
+}
+/* bottom panel */
+
+.bottomgrid {
+  display: grid;
+  grid-template-columns: 15% 35% 15% 15% 20%;
+  grid-template-rows: 16vh 28vh 28vh 28vh 28vh 5vh;
+  transition: all 10s;
+}
+
+.iamstudentof {
+  transition: all 0.5s;
+  line-height: 1.8em;
+  padding-left: 0.5em;
+  font-size: 4em;
+  background-color: white;
+  color: black;
+  color: rgb(72, 72, 72);
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 5;
+}
+@media only screen and (max-width: 1200px)
+{
+  .bottomgrid {
+    display: grid;
+    grid-template-columns: 0vw 10vw 40vw 40vw 10vw;
+    grid-template-rows: auto 28vh 28vh 28vh 28vh 5vh;
+    transition: all 10s;
+  }
+
+  .iamstudentof {
+    transition: all 0.5s;
+    line-height: 1.5em;
+    padding-left: 0.5em;
+    font-size: 2em;
+    background-color: white;
+    color: black;
+    color: rgb(72, 72, 72);
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 5;
+  }
+}
+#year1 {
+  color: rgb(255, 255, 255, 0.5);
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+}
+#year2 {
+  color: rgb(255, 255, 255, 0.5);
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+#year3 {
+  color: rgb(255, 255, 255, 0.5);
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+}
+#year4 {
+  color: rgb(255, 255, 255, 0.5);
+  grid-row: 5 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.yearnumber {
+  height: 90%;
+  line-height: 2em;
+  font-size: 5.5em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.year {
+  text-align: center;
+  height: 10%;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.cardcontainer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 28vh;
+}
+
+#card1 {
+  grid-row: 2 / span 1;
+  margin-top: 1.2em;
+  grid-column: 3 / span 1;
+}
+
+#card2 {
+  grid-row: 2 / span 1;
+  margin-top: 1.2em;
+  grid-column: 4 / span 1;
+}
+
+#card3 {
+  grid-row: 3 / span 1;
+  margin-top: 1.2em;
+  grid-column: 3 / span 1;
+}
+
+#card4 {
+  grid-row: 3 / span 1;
+  margin-top: 1.2em;
+  grid-column: 4 / span 1;
+}
+
+#card5 {
+  grid-row: 4 / span 1;
+  margin-top: 1.2em;
+  grid-column: 3 / span 1;
+}
+
+#card6 {
+  grid-row: 4 / span 1;
+  margin-top: 1.2em;
+  grid-column: 4 / span 1;
+}
+
+#card7 {
+  grid-row: 5 / span 1;
+  margin-top: 1.2em;
+  grid-column: 3 / span 1;
+}
+
+#card8 {
+  grid-row: 5 / span 1;
+  margin-top: 1.2em;
+  grid-column: 4 / span 1;
+}
+
+
+.cardfront {
+  transition: transform 0.15s;
+  background-color: white;
+  height: 90%;
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  border-radius: 7%;
+  width: 60%;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  z-index: 3;
+  transform: rotateY(0deg);
+}
+
+.cardback {
+  transition: transform 0.15s;
+  transition-delay: 0.15s;
+  background-color: white;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  height: 90%;
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+  border-radius: 7%;
+  width: 60%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  transform: rotateY(90deg);
+}
+
+@keyframes flip {
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.cardcontainer:hover .cardfront {
+  transform: rotateY(90deg);
+}
+
+.cardcontainer:hover .cardback {
+  animation: flip 0.15s 0.15s 1 forwards;
+}
+@media only screen and (max-width: 1200px)
+{
+  .cardfront
+  {
+    width: 90%;
+    margin-left: 0%;
+  }
+  .yearnumber{
+    padding-left: 10px;
+    display: none;
+    font-size: 4.5em;
+  }
+  .year
+  {
+    display: none;
+    padding-left: 10px;
+  }
+  .cardback
+  {
+    width: 90%;
+    margin-left: 0vw;
+  }
+}
+.semester {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+.semno {
+  padding-top: 0.1em;
+  font-size: 7em;
+  color: rgb(72, 83, 201);
+  color: rgb(118, 118, 118);
+  text-align: center;
+  width: 100%;
+  height: 90%;
+}
+
+@media only screen and (max-width: 1200px)
+{
+  .semno
+  {
+    font-family: 'Lato';
+    transform: scale(0.8);
+  }
+}
+.subjectbtn {
+  background-color: rgb(72, 83, 201);
+  width: 90%;
+  height: max-content;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color: white;
+  text-align: center;
+  margin-left: 5%;
+  transition: all 0.3s;
+}
+
+.subjectbtn:hover {
+  filter: brightness(0.8);
+}
+
+.hightop {
+  margin-top: 55%;
+}
+
+.csetop {
+  margin-top: 40%;
+}
+
+.ecetop {
+  margin-top: 5%;
+}
+.boxshadow {
+  box-shadow: 1px 1px 4px rgb(165, 165, 165), -1px -1px 4px rgb(165, 165, 165);
+}
+
+#subjectpanel {
+  grid-row: 2 / span 5;
+  opacity: 0;
+  transition: all 0.5s, z-index 0s;
+  grid-column: 1 / span 5;
+  position: relative;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(219, 219, 219, 0.75);
+  margin: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+#subjectgrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 15vh;
+}
+
+#iwanttostudy {
+  font-size: 3em;
+  transition: color 0.5s;
+  color: rgb(72, 83, 201);
+  color: rgba(72, 72, 72);
+  padding: 1em;
+  padding-top: 0.5em;
+}
+
+.subjectname {
+  font-size: 1.85em;
+  padding-left: 15%;
+  text-align: left;
+  display: none;
+  border-bottom: solid rgba(0, 0, 0, 0.5) 1px;
+  padding-top: 0.5em;
+  /* color: rgb(72, 83, 201); */
+  transition: all 0.25s;
+  padding-bottom: 0.5em;
+  text-transform: capitalize;
+}
+
+.subjectname:hover {
+  /* background-color: rgb(209, 82, 82); */
+  color: white;
+  transform: scale(1.3);
+}
+@media only screen and (max-width: 1200px)
+{
+  #iwanttostudy
+  {
+    font-size: 1.5em;
+  }
+  .subjectname
+  {
+    font-size: 1.15em;
+    padding-left: 5%;
+  }
+  .subjectname:hover
+  {
+    transform: scale(1.07);
+  }
+  .subjectbtn
+  {
+    font-size: 1.25em;
+  }
+
+  .hightop 
+  {
+    margin-top: 35%;
+  }
+  .csetop
+  {
+    margin-top: 20%;
+  }
+
+}
+#s1 {
+  border-top: solid rgba(0, 0, 0, 0.5) 1px;
+}
+
+.icon {
+  padding-left: 1em;
+  padding-right: 1em;
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+.pr {
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  transition: color 5s;
+}
+
+
+#footer
+{
+  color: white;
+  font-size: 1.35em;
+  text-align: right;
+  padding: 1.5em;
+  opacity: 0.8;
+  border-top: solid 1.5px rgba(255,255,255,0.7)
+}
+#footer hr
+{
+  color: white;
+}
+#footer a
+{
+  text-decoration: underline;
+  color: white;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 500px)
+{
+  #footer
+  {
+    font-size: 1em;
+    padding-left: 1em;
+  }
+}

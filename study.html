@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400|Raleway|Roboto|Ubuntu&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/study.css">
+    <title id="pagetitle">Study | VidPlay</title>
+    <script src="https://kit.fontawesome.com/82f1a87244.js" crossorigin="anonymous"></script>
+    <style id="custom"></style>
+</head>
+
+<body>
+    <div id="player">
+        <div class="close"><span><i onclick="closeplayer()" class="icon fas fa-times"></i></span></div>
+        <div id="playertitle"></div>
+        <div id="playerlink"><a id="panchor" target="new" href="#"><span id="plink"></span></a></div>
+        <div id="ytcontainer">
+            <iframe id="ytembed" width="99%" height="99%" src=""
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="titlebar"><a href="index.html#scrollto">
+        <i class="icon fas extrapad fa-chevron-left"></i> StudyPit Home</a>
+    </div>
+    <div class="subjectbar"><i class="icon extrapad fas fa-book"></i><span id="subjectname"></span>
+    </div>
+
+    <div class="cardgrid">
+
+        <!-- <div class="card">
+            <div class="videotitle">
+                <span class="titleholder">A video title for EN</span>
+                <div class="videodate">Added on June 19, 2020</div>
+            </div>
+            <div class="playbutton"><span><i class="icon fas fa-play-circle"></i></span></div>
+        </div>
+
+        <div class="card">
+            <div class="videotitle">
+                <span class="titleholder">A video title for EN</span>
+                <div class="videodate">Added on June 19, 2020</div>
+            </div>
+            <div class="playbutton"><i class="icon fas fa-play-circle"></i></div>
+        </div>
+
+        <div class="card">
+            <div class="videotitle">
+                <span class="titleholder">A video title for EN</span>
+                <div class="videodate">Added on June 19, 2020</div>
+            </div>
+            <div class="playbutton"><i class="icon fas fa-play-circle"></i></div>
+        </div>
+
+        <div class="card">
+            <div class="videotitle">
+                <span class="titleholder">A video title for EN</span>
+                <div class="videodate">Added on June 19, 2020</div>
+            </div>
+            <div class="playbutton"><i class="icon fas fa-play-circle"></i></div>
+        </div>
+
+        <div class="card">
+            <div class="videotitle">
+                <span class="titleholder">A video title for EN</span>
+                <div class="videodate">Added on June 19, 2020</div>
+            </div>
+            <div class="playbutton"><i class="icon fas fa-play-circle"></i></div>
+        </div>
+
+        <div class="card">
+            <div class="videotitle">
+                <span class="titleholder">A video title for EN</span>
+                <div class="videodate">Added on June 19, 2020</div>
+            </div>
+            <div class="playbutton"><i class="icon fas fa-play-circle"></i></div>
+        </div> -->
+
+    </div>
+    <!-- footer start -->
+<div id="footer">
+    Developed and maintained by Ishaan Mehta.<br> (<a href='mailto:ishaanmehta4@gmail.com'>Get in touch</a>)
+</div>
+<!-- footer end -->
+    <!-- cardgridend -->
+
+
+    <!-- JAVASCRIPT -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script>//Necessary firebase functions
+        var firebaseConfig = {
+            apiKey: "AIzaSyALZSbrwHtkj0KXJlQXUzXbHFF81dlMSJg",
+            authDomain: "eduplay-dda02.firebaseapp.com",
+            databaseURL: "https://eduplay-dda02.firebaseio.com",
+            projectId: "eduplay-dda02",
+            storageBucket: "eduplay-dda02.appspot.com",
+            messagingSenderId: "362437441168",
+            appId: "1:362437441168:web:d374f61c924dce0e03ca15"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        class video {
+            constructor(title, link, subject, date) {
+                this.title = title;
+                this.link = link;
+                this.subject = subject;
+                this.date = date;
+            }
+            toString() {
+                return this.title + ', ' + this.link + ', ' + this.subject + ' , ' + this.date;
+            }
+        }
+
+        // Firestore data converter
+        videoConverter = {
+            toFirestore: function (video) {
+                return {
+                    title: video.title,
+                    subject: video.subject,
+                    link: video.link,
+                    date: video.date
+                }
+            },
+            fromFirestore: function (snapshot, options) {
+                const data = snapshot.data(options);
+                return new video(data.title, data.link, data.subject, data.date)
+            }
+        }
+    </script>
+    <script>//gets variables from URL
+    function capital_letter(str) 
+{
+    str = str.split(" ");
+
+    for (var i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+}
+        var getQueryString = function (field, url) {
+            var href = url ? url : window.location.href;
+            var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+            var string = reg.exec(href);
+            return string ? string[1] : null;
+        };
+
+        var subj = decodeURI( getQueryString('subject')); // returns 'chicken'
+        var accent = getQueryString('accent');
+        subj=subj.toLowerCase();
+        document.getElementById("subjectname").innerHTML=subj;
+        document.getElementById("pagetitle").innerHTML=capital_letter("Study "+subj+" | StudyPit");
+    </script>
+    <script>//applies accent color
+        var colors = ["rgb(72, 83, 201)", "rgb(109, 35, 51)", "rgb(0, 131, 81)", "rgb(112, 62, 248)"];
+        var sty = "";
+        console.log(colors[accent]);
+        sty += ".titlebar {background-color: " + colors[accent] + ";}";
+        sty += ".videotitle {color: " + colors[accent] + ";}";
+        sty += ".playbutton {color: " + colors[accent] + ";}";
+        document.getElementById("custom").innerHTML = sty;
+    </script>
+    <script>//creates all the cards
+        var html = "";
+        var titles=[];
+        var links = []; var z = 0;
+        var count=0;
+        db.collection("videos").where("subject", "==", subj).withConverter(videoConverter).get()
+            .then(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    // doc.data() is never undefined for query doc snapshots
+                    // console.log(doc.title, " => ", doc.link);
+                    count=count+1;
+                    vidobj = doc.data();
+                    links[z] = vidobj.link;
+                    titles[z]= vidobj.title;
+                    html += '<div class="card">';
+                    html += '<div class="videotitle">';
+                    html += '<span class="titleholder">' + vidobj.title + '</span>';
+                    html += '<div class="videodate"> Added on ' + vidobj.date + '</div>';
+                    html += '</div>';
+                    html += '<div class="playbutton"><span onclick="openplayer(' + z + ')"><i class="icon fas fa-play-circle"></i></span></div>';
+                    html += '</div>';
+                    var divnode = document.getElementsByClassName("cardgrid")[0];
+                    divnode.innerHTML = html;
+                    z = z + 1;
+                });
+            })
+            .catch(function (error) {
+                console.log("Error getting documents: ", error);
+            });
+
+            if(count==0)
+            {
+                document.getElementsByClassName("cardgrid")[0].innerHTML="No videos for this subject yet.";
+            }
+    </script>
+    <script>//to open and close player
+        function openplayer(x) {
+            document.getElementById("playertitle").innerHTML=titles[x];
+            document.getElementById("plink").innerHTML="youtube.com/watch?v="+links[x];
+            document.getElementById("panchor").href="https://youtube.com/watch?v="+links[x];
+            document.getElementById("ytembed").src = "https://www.youtube.com/embed/" + links[x] + "?autoplay=1";
+            document.getElementById("player").style.display = "block";
+            document.getElementById("player").style.opacity = "1";
+        }
+
+        function closeplayer() {
+            document.getElementById("ytembed").src = "";
+            document.getElementById("player").style.opacity = "0";
+            document.getElementById("player").style.display = "none";
+        }
+    </script>
+    <script>
+        if(count>4 || window.innerWidth<1000)
+        {
+            document.querySelector('#footer').style.marginTop='none';
+        }
+    </script>
+
+    <!-- JAVASCRIPT END -->
+</body>
+
+</html>

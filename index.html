@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400|Raleway|Roboto|Ubuntu&display=swap"
+        rel="stylesheet">
+    <style id="custom"></style>
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>StudyPit</title>
+    <script src="https://kit.fontawesome.com/82f1a87244.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="toppanel">
+        <div class="form">
+            <div class="formheader">
+                Add a video
+                <i class="padicon fas extrapad ptr fa-times" onclick="closeform()"></i>
+            </div>
+
+            <form id="addform" name="addfrom">
+                <br>
+                <input type="text" id="formtitle" placeholder="Title for your video"><br>
+                <input type="text" id="formlink" placeholder="YouTube link"><br>
+                <!-- <input type="text" id="formsubb" placeholder="Select subject"><br> -->
+                <input list="subl" name="formsub" id="formsub" placeholder="Subject (Start typing..)">
+                <datalist id="subl">
+
+                </datalist>
+                <div class="formsubmit ptr btnhover" onclick="formsubmit()">Add video</div>
+            </form>
+            <div id="success">
+                Thanks for adding this video, it will certainly be of help to other students.
+            </div>
+        </div>
+        <div class="topgrid">
+            <div id="curr">StudyPit <span id="web">Beta</span></div>
+            <div id="info">
+                A collection of study related YouTube videos, added by the students themselves.
+                StudyPit arranges the videos submitted according to the subjects, thus facilitating the sharing of videos and studying during exam times.
+            </div>
+
+            <div class="contbutton">
+                <a href="#scrollto">
+                    <div class="continue btnhover"><i class="icon fas fa-play-circle"></i>Start Studying</div>
+                </a>
+            </div>
+            <div class="addbtn">
+                <div class="addvideo ptr btnhover" onclick="openform()"><i class="icon fas fa-plus-circle"></i>Add a video
+                </div>
+            </div>
+
+
+        </div>
+        <!-- grid end -->
+
+    </div>
+    <!-- top end -->
+    <div id="bottompanel">
+        <div id="scrollto" class="bottomgrid">
+            <div class="iamstudentof"><i class='icon pr fas fa-question-circle'></i>I am a student of...</div>
+            <div class="yearblock" id="year1">
+                <div class="yearnumber">1<sup>st</sup></div>
+                <div class="year">Y E A R</div>
+            </div>
+            <div class="yearblock" id="year2">
+                <div class="yearnumber">2<sup>nd</sup></div>
+                <div class="year">Y E A R</div>
+            </div>
+            <div class="yearblock" id="year3">
+                <div class="yearnumber">3<sup>rd</sup></div>
+                <div class="year">Y E A R</div>
+            </div>
+            <div class="yearblock" id="year4">
+                <div class="yearnumber">4<sup>th</sup></div>
+                <div class="year">Y E A R</div>
+            </div>
+
+
+            <div class="cardcontainer" id="card1">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">1</div>
+                </div>
+
+                <div class="cardback  boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn hightop" onclick="extendtop(1)">CONTINUE</div></a>
+                </div>
+            </div>
+
+            <div class="cardcontainer" id="card2">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">2</div>
+                </div>
+                <div class="cardback boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn hightop" onclick="extendtop(2)">CONTINUE</div></a>
+                </div>
+            </div>
+
+            <div class="cardcontainer" id="card3">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">3</div>
+                </div>
+                <div class="cardback boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn hightop" onclick="extendtop(3)">CONTINUE</div></a>
+                </div>
+            </div>
+
+            <div class="cardcontainer" id="card4">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">4</div>
+                </div>
+                <div class="cardback boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn csetop" onclick="extendtop(4)">CSE</div></a>
+                    <a href="#scrollto"><div class="subjectbtn ecetop" onclick="extendtop(5)">ECE</div></a>
+                </div>
+            </div>
+
+            <div class="cardcontainer" id="card5">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">5</div>
+                </div>
+                <div class="cardback boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn csetop" onclick="extendtop(6)">CSE</div></a>
+                    <a href="#scrollto"><div class="subjectbtn ecetop" onclick="extendtop(7)">ECE</div></a>
+                </div>
+            </div>
+
+            <div class="cardcontainer" id="card6">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">6</div>
+                </div>
+                <div class="cardback boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn csetop" onclick="extendtop(8)">CSE</div></a>
+                    <a href="#scrollto"><div class="subjectbtn ecetop" onclick="extendtop(9)">ECE</div></a>
+                </div>
+            </div>
+
+            <div class="cardcontainer" id="card7">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">7</div>
+                </div>
+                <div class="cardback boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn csetop" onclick="extendtop(10)">CSE</div></a>
+                    <a href="#scrollto"><div class="subjectbtn ecetop" onclick="extendtop(11)">ECE</div></a>
+                </div>
+            </div>
+
+            <div class="cardcontainer" id="card8">
+                <div class="cardfront boxshadow">
+                    <div class="semester">SEMESTER</div>
+                    <div class="semno">8</div>
+                </div>
+                <div class="cardback boxshadow">
+                    <a href="#scrollto"><div class="subjectbtn csetop" onclick="extendtop(12)">CSE</div></a>
+                    <a href="#scrollto"><div class="subjectbtn ecetop" onclick="extendtop(13)">ECE</div></a>
+                </div>
+            </div>
+
+            <div id="subjectpanel">
+                <div id="iwanttostudy"><i class='icon pr fas fa-question-circle'></i>And I want to study...</div>
+                <a href="" class="subanchor">
+                    <div class="subjectname" id="s1">Subject 1</div>
+                </a>
+                <a href="" class="subanchor">
+                    <div class="subjectname">Subject 1</div>
+                </a>
+                <a href="" class="subanchor">
+                    <div class="subjectname">Subject 1</div>
+                </a>
+                <a href="" class="subanchor">
+                    <div class="subjectname">Subject 1</div>
+                </a>
+                <a href="" class="subanchor">
+                    <div class="subjectname">Subject 1</div>
+                </a>
+                <a href="" class="subanchor">
+                    <div class="subjectname">Subject 1</div>
+                </a>
+            </div>
+
+        </div>
+        <!-- bottom grid end -->
+
+<!-- footer start -->
+<div id="footer">
+    Developed and maintained by Ishaan Mehta.<br> (<a href='mailto:ishaanmehta4@gmail.com'>Get in touch</a>)
+</div>
+<!-- footer end -->
+
+    </div>
+    <!-- bottom end -->
+
+    <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script>//Necessary firebase functions
+        var firebaseConfig = {
+            apiKey: "AIzaSyALZSbrwHtkj0KXJlQXUzXbHFF81dlMSJg",
+            authDomain: "eduplay-dda02.firebaseapp.com",
+            databaseURL: "https://eduplay-dda02.firebaseio.com",
+            projectId: "eduplay-dda02",
+            storageBucket: "eduplay-dda02.appspot.com",
+            messagingSenderId: "362437441168",
+            appId: "1:362437441168:web:d374f61c924dce0e03ca15"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+
+        function formsubmit() {
+            var s=document.getElementById("formsub").value;
+            s=s.toLowerCase();
+            var t= document.getElementById("formtitle").value;
+            var ll=document.getElementById("formlink").value;
+            var d = new Date();
+            d=d.toUTCString();
+            dx="";
+            var lx="";
+            if(ll[ll.length -1]!='/') ll+='/';
+            for(let i=ll.length-2;;i--)
+            {
+                if(ll[i]!='/'&&ll[i]!='=') lx+=ll[i];
+                else break;
+            }
+            ll=lx.split("").reverse().join("");
+            console.log("id is "+ll);
+            for(let m=0;m<16;m++) dx+=d[m];
+
+            db.collection("videos").add({
+                title: t,
+                link: ll,
+                subject: s,
+                date: dx
+            })
+                .then(function (docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("success").innerHTML='Thanks! The video "'+t+'" was successfully added, and will certainly be of help to others. Cheers :)';
+                    document.getElementById("formtitle").style.display="none";
+                    document.getElementById("formsub").style.display="none";
+                    document.getElementById("formlink").style.display="none";
+                    document.getElementById("success").style.display="block";
+                    document.getElementById("success").style.marginTop="2%";
+                    document.getElementById("success").style.opacity="1";
+                    document.getElementsByClassName("formsubmit")[0].style.display="none";
+                })
+                .catch(function (error) {
+                    console.error("Error adding document: ", error);
+                    alert("An error occured while adding the video. Please recheck the form and retry adding the video.")
+                });
+        }
+
+        function ss()
+        {
+                    document.getElementById("formtitle").style.display="none";
+                    document.getElementById("formsub").style.display="none";
+                    document.getElementById("formlink").style.display="none";
+                    document.getElementById("success").style.display="block";
+                    document.getElementById("success").style.display="block";
+                    document.getElementById("success").style.marginTop="2%";
+                    document.getElementById("success").style.opacity="1";
+                    document.getElementsByClassName("formsubmit")[0].style.display="none";
+        }
+    </script>
+
+</body>
+
+</html>
