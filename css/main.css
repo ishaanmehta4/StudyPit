@@ -43,7 +43,7 @@ body {
   z-index: 1;
   /* styling */
   /* background-image: url(../media/darkdesk.jpg); */
-  background-image: url(../media/darkdeskmob.jpg);
+  background-image: url(../media/webbg.jpg);
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,6 +108,7 @@ body {
   font-size: 1.15em;
   padding: 1em;
   margin-top: 0em;
+  color:burlywood;
   /* font-weight: ; */
   animation: fadeup 0.3s 1.5s backwards 1;
   /* background-color: rgba(0,0,0,0.7); */
