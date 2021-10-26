@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.parent{
+    height: 600px;
+    background-color: rgb(10, 10, 2);
+}
+div.child{
+    height: 100px;
+    width: 100px;
+    background-color: yellow ;
+    border-radius: 50%;
+    animation: 2s move ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+div.child-2{
+    height: 100px;
+    width: 100px;
+    background-color: yellow ;
+    border-radius: 50%;
+    animation: 2s move ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+@keyframes move{
+    0%{
+        transform: translateX(0vw);
+    } 
+    25%{
+        transform: translate(100vw);
+        background-color: aquamarine;
+    }
+    75%{
+        transform: translateY(400px);
+        background-color: darkviolet;
+    }
+    100%{
+        transform: translateX(vw);
+        animation-direction: reverse;
+    }
+}
